@@ -58,11 +58,11 @@ const createTodoList = async (data) => {
     todoItemContainer.setAttribute('id', `${obj.id}`)
     todoItemContainer.classList.add('todo-item-container')
     todoItemsContainer.appendChild(todoItemContainer)
-
+    
     const todoTaskName = document.createElement('div')
     todoTaskName.classList.add('task-name')
     todoTaskName.setAttribute('contentEditable', 'true')
-    todoTaskName.innerText = `${obj.task}`
+    todoTaskName.innerHTML = `<p>${obj.task}</p>`
     todoTaskName.addEventListener('input', (e) => {
       updateTask(e.currentTarget.parentElement.id, e.currentTarget.innerText)
     })

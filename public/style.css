@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Anybody&family=Source+Code+Pro:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +11,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url('https://d1csarkz8obe9u.cloudfront.net/posterpreviews/yellow-notebook-paper-background-design-template-d7dfa26f8c8c759652e2521f0ecd24eb_screen.jpg?ts=1636990781');
 }
 
 h1{
@@ -21,8 +23,13 @@ h1{
   font-family: 'Source Code Pro', monospace;
   font-weight: bold;
   font-size: 80px;
+  text-decoration: underline;
 }
-
+p{
+  font-weight: bold;
+  font-size: 30px;
+  font-family: 'Caveat', cursive;
+}
 #todo-add-container {
   display: flex;
   justify-content: center;
@@ -51,14 +58,17 @@ h1{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 400px;
+  width: 500px;
+  height: 40px;
   padding: 5px;
   border-radius: 10px;
-  background-color: darkgray;
   margin-bottom: 30px;
   margin-right: 40px;
 }
-
+.todo-item-container:hover{
+  background-color: blanchedalmond;
+  opacity: 80%;
+}
 .task-name {
   width: 500px;
   text-align: center;
@@ -90,7 +100,7 @@ h1{
   border: none;
   outline: none;
   border-radius: 20px;
-  background-color: darkgray;
+  background:none;
 }
 .delete-btn:hover{
   cursor: pointer;
