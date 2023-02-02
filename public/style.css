@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Anybody&family=Source+Code+Pro:ital@1&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -13,16 +14,20 @@ body{
 
 h1{
   margin-top: 100px;
-  color: red;
+  color: black;
   display: flex;
   justify-content: center;
+  font-family: 'Anybody', cursive;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: bold;
+  font-size: 80px;
 }
 
 #todo-add-container {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
-  width: 700px;
+  margin-top: 75px;
+  width: 720px;
 }
 
 #todo-add-container input {
@@ -85,5 +90,9 @@ h1{
   border: none;
   outline: none;
   border-radius: 20px;
+  background-color: darkgray;
+}
+.delete-btn:hover{
+  cursor: pointer;
   background-color: red;
 }

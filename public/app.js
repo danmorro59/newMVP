@@ -70,7 +70,7 @@ const createTodoList = async (data) => {
 
     const todoDeleteBtn = document.createElement('button')
     todoDeleteBtn.classList.add('delete-btn')
-    todoDeleteBtn.innerText = 'Delete'
+    todoDeleteBtn.innerHTML = `<i class="fa-solid fa-trash-can fa-2x"></i>`
     todoDeleteBtn.addEventListener('click', (e) => {
       deleteTask(e.currentTarget.parentElement.id)
     })
@@ -89,65 +89,3 @@ addBtn.addEventListener('click', () => {
   todoInput.value = ''
 })
 
-// const body = document.querySelector('body')
-// const subBTN = document.querySelector('#submitBtn')
-// const container = document.querySelector('.container')
-
-// danTodo.addEventListener('click', getTodos)
-//   async function getTodos(){
-//       await fetch(`${API_URL}/list`, {
-//         method: "GET",
-//         headers: {"Content-Type": "application/json"}
-//       }).then((response)=>response.json())
-//         .then((data)=>{
-//           displayTodos(data)
-//         })
-//       } 
-
-//   subBTN.addEventListener('click',async(e)=>{
-//     e.preventDefault()
-//     const input = document.getElementById('inputVal').value
-//       try {
-//         const todo = input
-//         const response = await fetch(`${API_URL}/list`, {
-//           method: "POST",
-//           headers: {"Content-Type": "application/json"},
-//           body: JSON.stringify({todo})
-//         }).then((response)=>response.json())
-//       } catch (error) {
-//         console.log(error)
-//       }
-//   })
-  
-//   function displayTodos(data){
-//     for(let i = 0;i<data.length;i++){
-//       const theInputs = document.createElement('p')
-//       let currentTodo = data[i].todo
-//       let currentId = data[i].id
-//       theInputs.id = currentId
-//       // console.log(current)
-//       theInputs.textContent = currentTodo
-//       const btn = document.createElement('button')
-//       btn.textContent = 'delete'
-//       btn.className = 'deleteBTN'
-//       btn.id = currentId
-//       container.append(theInputs)
-//       theInputs.append(btn)
-//       let deleteButt = document.getElementById(`${currentId}`)
-//       deleteButt.addEventListener('click',async()=>{
-//         let id = currentId
-//         deleteButt.remove()
-//         theInputs.remove()
-//         try {
-//           fetch(`http://localhost:4000/${id}`, {
-//             method: 'DELETE',
-//             headers: {
-//               'Content-Type': 'application/json'
-//               }
-//             })
-//         } catch (error) {
-//           console.log(error)
-//         }
-//       })
-//     }
-//   }
